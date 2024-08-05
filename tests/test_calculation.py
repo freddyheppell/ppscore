@@ -39,7 +39,7 @@ def test__determine_case_and_prepare_df():
     df["constant"] = 1
     df["Pclass_category"] = df["Pclass_integer"].astype("category")
     df["Pclass_datetime"] = pd.to_datetime(
-        df["Pclass_integer"], infer_datetime_format=True
+        df["Pclass_integer"]
     )
     df["Survived_boolean"] = df["Survived_integer"].astype(bool)
     df["Cabin_string"] = pd.Series(df["Cabin"].apply(str), dtype="string")
@@ -294,7 +294,7 @@ def test_predictors():
 def test_matrix():
     df = pd.read_csv("examples/titanic.csv")
     df = df[["Age", "Survived"]]
-    df["Age_datetime"] = pd.to_datetime(df["Age"], infer_datetime_format=True)
+    df["Age_datetime"] = pd.to_datetime(df["Age"])
     subset_df = df[["Survived", "Age_datetime"]]
 
     # check input types

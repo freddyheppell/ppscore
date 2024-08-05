@@ -1,5 +1,9 @@
 # ppscore - a Python implementation of the Predictive Power Score (PPS)
 
+> This version of the package has been updated to support Pandas 2.0.
+> Not in PyPI currently so install from Github using the 1.4.0 tag.
+> `pip install git+https://github.com/freddyheppell/ppscore@v1.4.0`
+
 ### From the makers of [bamboolib - a GUI for pandas DataFrames](https://bamboolib.com)
 
 
